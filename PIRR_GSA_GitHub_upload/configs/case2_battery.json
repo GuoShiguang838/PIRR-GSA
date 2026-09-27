@@ -1,0 +1,30 @@
+{
+  "case": "case2_battery",
+  "reference": {
+    "N_base": 16384,
+    "T": 160,
+    "seed": 7311
+  },
+  "formal": {
+    "N": 200,
+    "T": 160,
+    "epochs": 30,
+    "seeds": "0,1,2,3,4,5,6,7",
+    "latent_dim": 5,
+    "pce_order": 2,
+    "noise_scale": 0.005,
+    "validation_N": 512,
+    "batch_size": 32,
+    "predict_batch_size": 512,
+    "lr": 0.0005,
+    "lam_cross": 0.05,
+    "lam_residual": 0.0001,
+    "lam_phy": 8.0,
+    "lam_ortho": 0.0,
+    "soft_lam_cross": 0.05,
+    "semantic_loss_alpha": 0.1,
+    "pretrain_epochs": 6,
+    "sobol_N_base": 2048,
+    "sobol_seed": 90000
+  }
+}

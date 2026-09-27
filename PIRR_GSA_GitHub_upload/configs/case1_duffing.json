@@ -1,0 +1,32 @@
+{
+  "case": "case1_duffing",
+  "reference": {
+    "n_base": 16384,
+    "T": 192,
+    "T_end": 40.0,
+    "internal_substeps": 2,
+    "seed": 20260921
+  },
+  "formal": {
+    "N": 200,
+    "T": 192,
+    "T_end": 40.0,
+    "internal_substeps": 2,
+    "seeds": "0,1,2,3,4,5,6,7",
+    "residual_dim": 2,
+    "pce_order": 2,
+    "include_tcn": true,
+    "epochs": 20,
+    "lr": 0.0005,
+    "batch_size": 32,
+    "predict_batch_size": 512,
+    "onset_time": 4.0,
+    "validation_N": 512,
+    "sobol_N_base": 8192,
+    "sobol_seed": 97000
+  },
+  "sample_efficiency": {
+    "Ns": "50,100,200,400",
+    "seeds": "0,1,2,3,4,5,6,7"
+  }
+}

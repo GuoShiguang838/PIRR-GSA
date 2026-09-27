@@ -1,0 +1,226 @@
+{
+  "source": "results\\case2_battery\\formal_n200.json",
+  "summary": [
+    {
+      "Method": "Direct-Time-PCE",
+      "n_seeds": 8,
+      "RMSE_func": {
+        "mean": 0.008060527137370144,
+        "std": 0.003195829141960792
+      },
+      "RMSE_func_S1": {
+        "mean": 0.00839136087334193,
+        "std": 0.0038029928967736365
+      },
+      "RMSE_func_ST": {
+        "mean": 0.007470183653738317,
+        "std": 0.00319714525682637
+      },
+      "RMSE_functional_index": {
+        "mean": 0.00580148039689914,
+        "std": 0.002806750912989159
+      },
+      "NRMSE_response_validation_clean": {
+        "mean": 0.06561993744038472,
+        "std": 0.005795669565725654
+      },
+      "NRMSE_reconstruction_train": null
+    },
+    {
+      "Method": "PCA-PCE",
+      "n_seeds": 8,
+      "RMSE_func": {
+        "mean": 0.008042212230358415,
+        "std": 0.0031256238712108627
+      },
+      "RMSE_func_S1": {
+        "mean": 0.008358415395137986,
+        "std": 0.003651733658614948
+      },
+      "RMSE_func_ST": {
+        "mean": 0.007485394155950591,
+        "std": 0.003187211172680304
+      },
+      "RMSE_functional_index": {
+        "mean": 0.005708383669182507,
+        "std": 0.0028022358466418193
+      },
+      "NRMSE_response_validation_clean": {
+        "mean": 0.06234438624033825,
+        "std": 0.005908261495201354
+      },
+      "NRMSE_reconstruction_train": {
+        "mean": 0.041182646939498704,
+        "std": 0.001119997940979071
+      }
+    },
+    {
+      "Method": "TCN-AE-PCE",
+      "n_seeds": 8,
+      "RMSE_func": {
+        "mean": 0.020789418231679728,
+        "std": 0.004212044069913784
+      },
+      "RMSE_func_S1": {
+        "mean": 0.020588809626967075,
+        "std": 0.004959672913518794
+      },
+      "RMSE_func_ST": {
+        "mean": 0.02093903330790686,
+        "std": 0.003638109995569835
+      },
+      "RMSE_functional_index": {
+        "mean": 0.008871517061888807,
+        "std": 0.0050341543692814395
+      },
+      "NRMSE_response_validation_clean": {
+        "mean": 0.1517101024635388,
+        "std": 0.042010046135481094
+      },
+      "NRMSE_reconstruction_train": {
+        "mean": 0.12215656402714173,
+        "std": 0.012645037926973395
+      }
+    },
+    {
+      "Method": "Phy-TCN-AE-PCE (soft anchors)",
+      "n_seeds": 8,
+      "RMSE_func": {
+        "mean": 0.015210174677364578,
+        "std": 0.004356438163110545
+      },
+      "RMSE_func_S1": {
+        "mean": 0.01589334341193356,
+        "std": 0.005314615493830066
+      },
+      "RMSE_func_ST": {
+        "mean": 0.014423999023116132,
+        "std": 0.0034717945557695812
+      },
+      "RMSE_functional_index": {
+        "mean": 0.0080186158854599,
+        "std": 0.0036643538040743427
+      },
+      "NRMSE_response_validation_clean": {
+        "mean": 0.13095770468726387,
+        "std": 0.016483914980132467
+      },
+      "NRMSE_reconstruction_train": {
+        "mean": 0.09933131276323656,
+        "std": 0.01268353561232706
+      }
+    },
+    {
+      "Method": "Descriptor-Injected-Residual-PCA-PCE",
+      "n_seeds": 8,
+      "RMSE_func": {
+        "mean": 0.015266363090809417,
+        "std": 0.0019528926912442352
+      },
+      "RMSE_func_S1": {
+        "mean": 0.01494229979934229,
+        "std": 0.002165308729798663
+      },
+      "RMSE_func_ST": {
+        "mean": 0.015561004179692566,
+        "std": 0.0019355767747991147
+      },
+      "RMSE_functional_index": {
+        "mean": 0.005634120653985379,
+        "std": 0.0026897703332483475
+      },
+      "NRMSE_response_validation_clean": {
+        "mean": 0.08000670837937822,
+        "std": 0.005518600349388105
+      },
+      "NRMSE_reconstruction_train": {
+        "mean": 0.06696256192319236,
+        "std": 0.0025790860305303586
+      }
+    },
+    {
+      "Method": "Descriptor-Injected-Residual-TCN-AE-PCE",
+      "n_seeds": 8,
+      "RMSE_func": {
+        "mean": 0.014370059568591968,
+        "std": 0.0036351111839721274
+      },
+      "RMSE_func_S1": {
+        "mean": 0.015020681035786151,
+        "std": 0.004093933280311723
+      },
+      "RMSE_func_ST": {
+        "mean": 0.013566634788704101,
+        "std": 0.003669502194325746
+      },
+      "RMSE_functional_index": {
+        "mean": 0.00787113768816378,
+        "std": 0.003703722506539127
+      },
+      "NRMSE_response_validation_clean": {
+        "mean": 0.14212702029669516,
+        "std": 0.009670140058829341
+      },
+      "NRMSE_reconstruction_train": {
+        "mean": 0.10182884024956454,
+        "std": 0.013167738128083601
+      }
+    }
+  ],
+  "exact_residual_pca_vs_strongest_old_route": {
+    "metric": "RMSE_func",
+    "lower_is_better": true,
+    "proposed_method": "Descriptor-Injected-Residual-PCA-PCE",
+    "strongest_baseline": "PCA-PCE",
+    "paired_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "n_pairs": 8,
+    "proposed_mean": 0.015266363090809417,
+    "baseline_mean": 0.008042212230358415,
+    "paired_difference_definition": "baseline - proposed",
+    "paired_difference_mean": -0.007224150860451003,
+    "paired_difference_95ci": [
+      -0.008087529518979108,
+      -0.006488053572833309
+    ],
+    "paired_win_rate": 0.0,
+    "wilcoxon_statistic": 0.0,
+    "wilcoxon_one_sided_p": 1.0
+  },
+  "exact_residual_tcn_vs_exact_residual_pca": {
+    "metric": "RMSE_func",
+    "lower_is_better": true,
+    "proposed_method": "Descriptor-Injected-Residual-TCN-AE-PCE",
+    "strongest_baseline": "Descriptor-Injected-Residual-PCA-PCE",
+    "paired_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "n_pairs": 8,
+    "proposed_mean": 0.014370059568591968,
+    "baseline_mean": 0.015266363090809417,
+    "paired_difference_definition": "baseline - proposed",
+    "paired_difference_mean": 0.00089630352221745,
+    "paired_difference_95ci": [
+      -0.0008603556122749681,
+      0.0024460897434448667
+    ],
+    "paired_win_rate": 0.75,
+    "wilcoxon_statistic": 25.0,
+    "wilcoxon_one_sided_p": 0.19140625
+  }
+}

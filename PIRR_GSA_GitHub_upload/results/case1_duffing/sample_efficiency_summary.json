@@ -1,0 +1,2483 @@
+{
+  "settings": {
+    "Ns": "50,100,200,400",
+    "seeds": "0,1,2,3,4,5,6,7",
+    "T": 192,
+    "T_end": 40.0,
+    "internal_substeps": 2,
+    "residual_dim": 2,
+    "pce_order": 2,
+    "epochs": 20,
+    "lr": 0.0005,
+    "batch_size": 32,
+    "predict_batch_size": 512,
+    "onset_time": 4.0,
+    "validation_N": 512,
+    "sobol_N_base": 8192,
+    "sobol_seed": 97000,
+    "reference": "docs\\oscillator\\functional_gsa\\CASE1_TIMEWISE_DIRECTMC_Nbase16384_T192_seed20260921.json",
+    "out_tag": "CASE1_SAMPLE_EFFICIENCY_FORMAL8"
+  },
+  "reference": "docs\\oscillator\\functional_gsa\\CASE1_TIMEWISE_DIRECTMC_Nbase16384_T192_seed20260921.json",
+  "methods": [
+    "Direct-Time-PCE",
+    "PCA-PCE",
+    "TCN-AE-PCE",
+    "Lift-Only-PCE (r=0)",
+    "PIRR-PCA-PCE",
+    "PIRR-TCN-AE-PCE"
+  ],
+  "comparison_rule": "Report every predeclared budget under uniform-time, reference-variance-weighted, and active-time complete-field metrics.",
+  "conditions": [
+    {
+      "N": 50,
+      "summary": [
+        {
+          "Method": "Direct-Time-PCE",
+          "n_seeds": 8,
+          "RMSE_func": {
+            "mean": 0.23681304609773465,
+            "std": 0.013930515078449146
+          },
+          "RMSE_func_variance_weighted": {
+            "mean": 0.25850080475574455,
+            "std": 0.01523812739970062
+          },
+          "RMSE_func_active_1e-04": {
+            "mean": 0.238684109410883,
+            "std": 0.01404033780617725
+          },
+          "RMSE_func_active_1e-03": {
+            "mean": 0.23995608492588194,
+            "std": 0.014114927486050555
+          },
+          "RMSE_func_active_1e-02": {
+            "mean": 0.24124864988395744,
+            "std": 0.01419073822586921
+          },
+          "RMSE_func_S1": {
+            "mean": 0.21921710677266543,
+            "std": 0.012758655928232958
+          },
+          "RMSE_func_ST": {
+            "mean": 0.2528200030987735,
+            "std": 0.020946517888305913
+          },
+          "RMSE_functional_index": {
+            "mean": 0.21044571044129773,
+            "std": 0.012879944736731378
+          },
+          "NRMSE_response_validation_clean": {
+            "mean": 1.1305041966717544,
+            "std": 0.1083050742948543
+          },
+          "NRMSE_reconstruction_train": null
+        },
+        {
+          "Method": "PCA-PCE",
+          "n_seeds": 8,
+          "RMSE_func": {
+            "mean": 0.25270833240160373,
+            "std": 0.013822886753278179
+          },
+          "RMSE_func_variance_weighted": {
+            "mean": 0.25380805442890725,
+            "std": 0.01471137249084772
+          },
+          "RMSE_func_active_1e-04": {
+            "mean": 0.2523119733345648,
+            "std": 0.013685674159788266
+          },
+          "RMSE_func_active_1e-03": {
+            "mean": 0.25117969392398753,
+            "std": 0.013547229105326044
+          },
+          "RMSE_func_active_1e-02": {
+            "mean": 0.2499366064117953,
+            "std": 0.013465410588046192
+          },
+          "RMSE_func_S1": {
+            "mean": 0.236797719289067,
+            "std": 0.01570073511111046
+          },
+          "RMSE_func_ST": {
+            "mean": 0.26738697687822194,
+            "std": 0.01765461218602791
+          },
+          "RMSE_functional_index": {
+            "mean": 0.19364344864361796,
+            "std": 0.016237337243611413
+          },
+          "NRMSE_response_validation_clean": {
+            "mean": 1.1086184877845902,
+            "std": 0.10712785501017343
+          },
+          "NRMSE_reconstruction_train": {
+            "mean": 0.2585281278270643,
+            "std": 0.018454477921485
+          }
+        },
+        {
+          "Method": "TCN-AE-PCE",
+          "n_seeds": 8,
+          "RMSE_func": {
+            "mean": 0.24885421911173405,
+            "std": 0.02697584623108849
+          },
+          "RMSE_func_variance_weighted": {
+            "mean": 0.24654116750464347,
+            "std": 0.03363175646505557
+          },
+          "RMSE_func_active_1e-04": {
+            "mean": 0.24750925446911304,
+            "std": 0.027624876801851637
+          },
+          "RMSE_func_active_1e-03": {
+            "mean": 0.2462711165629244,
+            "std": 0.02809276644920261
+          },
+          "RMSE_func_active_1e-02": {
+            "mean": 0.24471075265834222,
+            "std": 0.02885285836497286
+          },
+          "RMSE_func_S1": {
+            "mean": 0.2344907974940552,
+            "std": 0.025382714371049293
+          },
+          "RMSE_func_ST": {
+            "mean": 0.26221090220392373,
+            "std": 0.03072597728283269
+          },
+          "RMSE_functional_index": {
+            "mean": 0.2173510135377953,
+            "std": 0.038459531344542136
+          },
+          "NRMSE_response_validation_clean": {
+            "mean": 0.980516659129159,
+            "std": 0.06907569052796396
+          },
+          "NRMSE_reconstruction_train": {
+            "mean": 0.5697334992859153,
+            "std": 0.11331948882165402
+          }
+        },
+        {
+          "Method": "Lift-Only-PCE (r=0)",
+          "n_seeds": 8,
+          "RMSE_func": {
+            "mean": 0.10249628940133648,
+            "std": 0.008165447049738823
+          },
+          "RMSE_func_variance_weighted": {
+            "mean": 0.05483748009958551,
+            "std": 0.005969825374540162
+          },
+          "RMSE_func_active_1e-04": {
+            "mean": 0.09864232776821008,
+            "std": 0.00839397950267147
+          },
+          "RMSE_func_active_1e-03": {
+            "mean": 0.09556990220467687,
+            "std": 0.008424453876507865
+          },
+          "RMSE_func_active_1e-02": {
+            "mean": 0.09292611026915222,
+            "std": 0.008292060772697066
+          },
+          "RMSE_func_S1": {
+            "mean": 0.09668800435910088,
+            "std": 0.008490770064587594
+          },
+          "RMSE_func_ST": {
+            "mean": 0.10787262196753136,
+            "std": 0.009532189998692042
+          },
+          "RMSE_functional_index": {
+            "mean": 0.032133154588494126,
+            "std": 0.006175189291915144
+          },
+          "NRMSE_response_validation_clean": {
+            "mean": 0.4093622108795386,
+            "std": 0.04793989636284446
+          },
+          "NRMSE_reconstruction_train": {
+            "mean": 0.33873217893112506,
+            "std": 0.027393786342999105
+          }
+        },
+        {
+          "Method": "PIRR-PCA-PCE",
+          "n_seeds": 8,
+          "RMSE_func": {
+            "mean": 0.07783555357355,
+            "std": 0.0070748104821577226
+          },
+          "RMSE_func_variance_weighted": {
+            "mean": 0.03965037266039052,
+            "std": 0.0060484920592682335
+          },
+          "RMSE_func_active_1e-04": {
+            "mean": 0.07193776925737426,
+            "std": 0.00797597300035436
+          },
+          "RMSE_func_active_1e-03": {
+            "mean": 0.0678197760592101,
+            "std": 0.009057104949731346
+          },
+          "RMSE_func_active_1e-02": {
+            "mean": 0.06536837640556258,
+            "std": 0.009442679972621939
+          },
+          "RMSE_func_S1": {
+            "mean": 0.07255173907565211,
+            "std": 0.006661137221249044
+          },
+          "RMSE_func_ST": {
+            "mean": 0.08260297143988674,
+            "std": 0.0094723243208056
+          },
+          "RMSE_functional_index": {
+            "mean": 0.019654038237787993,
+            "std": 0.00866342203091494
+          },
+          "NRMSE_response_validation_clean": {
+            "mean": 0.39386242031893337,
+            "std": 0.04332222900542446
+          },
+          "NRMSE_reconstruction_train": {
+            "mean": 0.1628978709219105,
+            "std": 0.018137224824450068
+          }
+        },
+        {
+          "Method": "PIRR-TCN-AE-PCE",
+          "n_seeds": 8,
+          "RMSE_func": {
+            "mean": 0.10133761113256765,
+            "std": 0.009810612453461
+          },
+          "RMSE_func_variance_weighted": {
+            "mean": 0.0469127458977146,
+            "std": 0.0062165513782981826
+          },
+          "RMSE_func_active_1e-04": {
+            "mean": 0.09396626097429259,
+            "std": 0.009109341145031502
+          },
+          "RMSE_func_active_1e-03": {
+            "mean": 0.08917939761501119,
+            "std": 0.00936834474891909
+          },
+          "RMSE_func_active_1e-02": {
+            "mean": 0.08450919613626026,
+            "std": 0.009165282968781118
+          },
+          "RMSE_func_S1": {
+            "mean": 0.09102393209558846,
+            "std": 0.006329176941346306
+          },
+          "RMSE_func_ST": {
+            "mean": 0.11040055373364055,
+            "std": 0.015056746560348278
+          },
+          "RMSE_functional_index": {
+            "mean": 0.025990318669664714,
+            "std": 0.007412106524961119
+          },
+          "NRMSE_response_validation_clean": {
+            "mean": 0.3959405652421301,
+            "std": 0.07112485031970966
+          },
+          "NRMSE_reconstruction_train": {
+            "mean": 0.26210880724786145,
+            "std": 0.056449782085798254
+          }
+        }
+      ],
+      "metric_rankings": {
+        "RMSE_func": {
+          "winner": "PIRR-PCA-PCE",
+          "winner_value": 0.07783555357355,
+          "best_PIRR": "PIRR-PCA-PCE",
+          "best_PIRR_value": 0.07783555357355,
+          "strongest_conventional": "Direct-Time-PCE",
+          "strongest_conventional_value": 0.23681304609773465,
+          "PIRR_gain_over_conventional": 0.15897749252418464,
+          "PIRR_wins": true
+        },
+        "RMSE_func_variance_weighted": {
+          "winner": "PIRR-PCA-PCE",
+          "winner_value": 0.03965037266039052,
+          "best_PIRR": "PIRR-PCA-PCE",
+          "best_PIRR_value": 0.03965037266039052,
+          "strongest_conventional": "TCN-AE-PCE",
+          "strongest_conventional_value": 0.24654116750464347,
+          "PIRR_gain_over_conventional": 0.20689079484425293,
+          "PIRR_wins": true
+        },
+        "RMSE_func_active_1e-04": {
+          "winner": "PIRR-PCA-PCE",
+          "winner_value": 0.07193776925737426,
+          "best_PIRR": "PIRR-PCA-PCE",
+          "best_PIRR_value": 0.07193776925737426,
+          "strongest_conventional": "Direct-Time-PCE",
+          "strongest_conventional_value": 0.238684109410883,
+          "PIRR_gain_over_conventional": 0.16674634015350875,
+          "PIRR_wins": true
+        },
+        "RMSE_func_active_1e-03": {
+          "winner": "PIRR-PCA-PCE",
+          "winner_value": 0.0678197760592101,
+          "best_PIRR": "PIRR-PCA-PCE",
+          "best_PIRR_value": 0.0678197760592101,
+          "strongest_conventional": "Direct-Time-PCE",
+          "strongest_conventional_value": 0.23995608492588194,
+          "PIRR_gain_over_conventional": 0.17213630886667186,
+          "PIRR_wins": true
+        },
+        "RMSE_func_active_1e-02": {
+          "winner": "PIRR-PCA-PCE",
+          "winner_value": 0.06536837640556258,
+          "best_PIRR": "PIRR-PCA-PCE",
+          "best_PIRR_value": 0.06536837640556258,
+          "strongest_conventional": "Direct-Time-PCE",
+          "strongest_conventional_value": 0.24124864988395744,
+          "PIRR_gain_over_conventional": 0.17588027347839486,
+          "PIRR_wins": true
+        }
+      },
+      "paired_statistics_by_metric": {
+        "RMSE_func": {
+          "PIRR-PCA-PCE": {
+            "metric": "RMSE_func",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-PCA-PCE",
+            "strongest_baseline": "Direct-Time-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.07783555357355,
+            "baseline_mean": 0.23681304609773465,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.15897749252418464,
+            "paired_difference_95ci": [
+              0.14938775024249057,
+              0.1676297518021332
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          },
+          "PIRR-TCN-AE-PCE": {
+            "metric": "RMSE_func",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-TCN-AE-PCE",
+            "strongest_baseline": "Direct-Time-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.10133761113256765,
+            "baseline_mean": 0.23681304609773465,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.135475434965167,
+            "paired_difference_95ci": [
+              0.12476675768649759,
+              0.14606568561538028
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          }
+        },
+        "RMSE_func_variance_weighted": {
+          "PIRR-PCA-PCE": {
+            "metric": "RMSE_func_variance_weighted",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-PCA-PCE",
+            "strongest_baseline": "TCN-AE-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.03965037266039052,
+            "baseline_mean": 0.24654116750464347,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.20689079484425296,
+            "paired_difference_95ci": [
+              0.18608588949964233,
+              0.228980824570334
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          },
+          "PIRR-TCN-AE-PCE": {
+            "metric": "RMSE_func_variance_weighted",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-TCN-AE-PCE",
+            "strongest_baseline": "TCN-AE-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.0469127458977146,
+            "baseline_mean": 0.24654116750464347,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.19962842160692887,
+            "paired_difference_95ci": [
+              0.1791549482085995,
+              0.22198409723532578
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          }
+        },
+        "RMSE_func_active_1e-04": {
+          "PIRR-PCA-PCE": {
+            "metric": "RMSE_func_active_1e-04",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-PCA-PCE",
+            "strongest_baseline": "Direct-Time-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.07193776925737426,
+            "baseline_mean": 0.238684109410883,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.16674634015350873,
+            "paired_difference_95ci": [
+              0.15717215887422023,
+              0.17590675205140174
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          },
+          "PIRR-TCN-AE-PCE": {
+            "metric": "RMSE_func_active_1e-04",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-TCN-AE-PCE",
+            "strongest_baseline": "Direct-Time-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.09396626097429259,
+            "baseline_mean": 0.238684109410883,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.1447178484365904,
+            "paired_difference_95ci": [
+              0.13414876787200616,
+              0.15500730952735686
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          }
+        },
+        "RMSE_func_active_1e-03": {
+          "PIRR-PCA-PCE": {
+            "metric": "RMSE_func_active_1e-03",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-PCA-PCE",
+            "strongest_baseline": "Direct-Time-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.0678197760592101,
+            "baseline_mean": 0.23995608492588194,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.17213630886667186,
+            "paired_difference_95ci": [
+              0.16221257976690895,
+              0.18209960794477897
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          },
+          "PIRR-TCN-AE-PCE": {
+            "metric": "RMSE_func_active_1e-03",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-TCN-AE-PCE",
+            "strongest_baseline": "Direct-Time-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.08917939761501119,
+            "baseline_mean": 0.23995608492588194,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.15077668731087077,
+            "paired_difference_95ci": [
+              0.13963643340702123,
+              0.16158088378373842
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          }
+        },
+        "RMSE_func_active_1e-02": {
+          "PIRR-PCA-PCE": {
+            "metric": "RMSE_func_active_1e-02",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-PCA-PCE",
+            "strongest_baseline": "Direct-Time-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.06536837640556258,
+            "baseline_mean": 0.24124864988395744,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.17588027347839486,
+            "paired_difference_95ci": [
+              0.16519152620858962,
+              0.18613861232222426
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          },
+          "PIRR-TCN-AE-PCE": {
+            "metric": "RMSE_func_active_1e-02",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-TCN-AE-PCE",
+            "strongest_baseline": "Direct-Time-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.08450919613626026,
+            "baseline_mean": 0.24124864988395744,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.15673945374769718,
+            "paired_difference_95ci": [
+              0.14501174898762748,
+              0.16779274826285043
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          }
+        }
+      }
+    },
+    {
+      "N": 100,
+      "summary": [
+        {
+          "Method": "Direct-Time-PCE",
+          "n_seeds": 8,
+          "RMSE_func": {
+            "mean": 0.1940412916297595,
+            "std": 0.018087272257577364
+          },
+          "RMSE_func_variance_weighted": {
+            "mean": 0.21190524737171645,
+            "std": 0.019516375659946593
+          },
+          "RMSE_func_active_1e-04": {
+            "mean": 0.1955739526483033,
+            "std": 0.018230455191350782
+          },
+          "RMSE_func_active_1e-03": {
+            "mean": 0.19661570963944194,
+            "std": 0.018327930611346067
+          },
+          "RMSE_func_active_1e-02": {
+            "mean": 0.1976743095210476,
+            "std": 0.018427071336062535
+          },
+          "RMSE_func_S1": {
+            "mean": 0.17743119449524208,
+            "std": 0.014517302360320528
+          },
+          "RMSE_func_ST": {
+            "mean": 0.20920093657525418,
+            "std": 0.02255883716316612
+          },
+          "RMSE_functional_index": {
+            "mean": 0.15443188081925707,
+            "std": 0.01795893130462609
+          },
+          "NRMSE_response_validation_clean": {
+            "mean": 0.8726562897725175,
+            "std": 0.03739243166635032
+          },
+          "NRMSE_reconstruction_train": null
+        },
+        {
+          "Method": "PCA-PCE",
+          "n_seeds": 8,
+          "RMSE_func": {
+            "mean": 0.22783685828827105,
+            "std": 0.01894801015467824
+          },
+          "RMSE_func_variance_weighted": {
+            "mean": 0.2112355154535924,
+            "std": 0.021754206688100398
+          },
+          "RMSE_func_active_1e-04": {
+            "mean": 0.2261278514640762,
+            "std": 0.019197122071944885
+          },
+          "RMSE_func_active_1e-03": {
+            "mean": 0.22366026470276346,
+            "std": 0.019448360198935054
+          },
+          "RMSE_func_active_1e-02": {
+            "mean": 0.22095400103791968,
+            "std": 0.01977471039816548
+          },
+          "RMSE_func_S1": {
+            "mean": 0.21406185798537763,
+            "std": 0.014881565573373782
+          },
+          "RMSE_func_ST": {
+            "mean": 0.24074616710246133,
+            "std": 0.023240137851177893
+          },
+          "RMSE_functional_index": {
+            "mean": 0.13215227324622905,
+            "std": 0.017384857880378517
+          },
+          "NRMSE_response_validation_clean": {
+            "mean": 0.8790512400093448,
+            "std": 0.04006183902102661
+          },
+          "NRMSE_reconstruction_train": {
+            "mean": 0.27693046685599026,
+            "std": 0.0116812639568055
+          }
+        },
+        {
+          "Method": "TCN-AE-PCE",
+          "n_seeds": 8,
+          "RMSE_func": {
+            "mean": 0.20274204840240517,
+            "std": 0.01772231485654433
+          },
+          "RMSE_func_variance_weighted": {
+            "mean": 0.18727785898175597,
+            "std": 0.027309284273284492
+          },
+          "RMSE_func_active_1e-04": {
+            "mean": 0.19971479485922414,
+            "std": 0.018714983719756783
+          },
+          "RMSE_func_active_1e-03": {
+            "mean": 0.19719221766292122,
+            "std": 0.019522711079288584
+          },
+          "RMSE_func_active_1e-02": {
+            "mean": 0.194190815333119,
+            "std": 0.020590789716454647
+          },
+          "RMSE_func_S1": {
+            "mean": 0.18827650659295606,
+            "std": 0.01914973114783685
+          },
+          "RMSE_func_ST": {
+            "mean": 0.21613252638484554,
+            "std": 0.01776455808909546
+          },
+          "RMSE_functional_index": {
+            "mean": 0.12990199254030987,
+            "std": 0.026720045732489497
+          },
+          "NRMSE_response_validation_clean": {
+            "mean": 0.8934929972627947,
+            "std": 0.05445081508804694
+          },
+          "NRMSE_reconstruction_train": {
+            "mean": 0.3582645643536843,
+            "std": 0.04146562881179311
+          }
+        },
+        {
+          "Method": "Lift-Only-PCE (r=0)",
+          "n_seeds": 8,
+          "RMSE_func": {
+            "mean": 0.10279233574034126,
+            "std": 0.010021086574435026
+          },
+          "RMSE_func_variance_weighted": {
+            "mean": 0.05872012597452811,
+            "std": 0.00642219599290037
+          },
+          "RMSE_func_active_1e-04": {
+            "mean": 0.09942134057498127,
+            "std": 0.01020243562371247
+          },
+          "RMSE_func_active_1e-03": {
+            "mean": 0.09775251053864528,
+            "std": 0.010453201619979353
+          },
+          "RMSE_func_active_1e-02": {
+            "mean": 0.09618970068294372,
+            "std": 0.010046021966937158
+          },
+          "RMSE_func_S1": {
+            "mean": 0.09736691380511493,
+            "std": 0.010475278553815623
+          },
+          "RMSE_func_ST": {
+            "mean": 0.10789082396995558,
+            "std": 0.010226383419399333
+          },
+          "RMSE_functional_index": {
+            "mean": 0.03576195740888537,
+            "std": 0.005818539315767764
+          },
+          "NRMSE_response_validation_clean": {
+            "mean": 0.3574568322429225,
+            "std": 0.018372369162300044
+          },
+          "NRMSE_reconstruction_train": {
+            "mean": 0.33670183865151093,
+            "std": 0.02031086372772654
+          }
+        },
+        {
+          "Method": "PIRR-PCA-PCE",
+          "n_seeds": 8,
+          "RMSE_func": {
+            "mean": 0.06914831554069104,
+            "std": 0.012231550643095572
+          },
+          "RMSE_func_variance_weighted": {
+            "mean": 0.03310994989063776,
+            "std": 0.007934085090588695
+          },
+          "RMSE_func_active_1e-04": {
+            "mean": 0.06320872857966789,
+            "std": 0.01285758162612419
+          },
+          "RMSE_func_active_1e-03": {
+            "mean": 0.060789550557555624,
+            "std": 0.012979402918246853
+          },
+          "RMSE_func_active_1e-02": {
+            "mean": 0.05942056745892081,
+            "std": 0.012543741137224847
+          },
+          "RMSE_func_S1": {
+            "mean": 0.06461786901406766,
+            "std": 0.010812366458510862
+          },
+          "RMSE_func_ST": {
+            "mean": 0.07334764688533696,
+            "std": 0.01382163435865236
+          },
+          "RMSE_functional_index": {
+            "mean": 0.019741176353571577,
+            "std": 0.006842068221034822
+          },
+          "NRMSE_response_validation_clean": {
+            "mean": 0.2899299221878145,
+            "std": 0.03257246352310417
+          },
+          "NRMSE_reconstruction_train": {
+            "mean": 0.17087261221782382,
+            "std": 0.016081629575340577
+          }
+        },
+        {
+          "Method": "PIRR-TCN-AE-PCE",
+          "n_seeds": 8,
+          "RMSE_func": {
+            "mean": 0.08670868728709961,
+            "std": 0.011587304636529608
+          },
+          "RMSE_func_variance_weighted": {
+            "mean": 0.03928465764087679,
+            "std": 0.007242617877793804
+          },
+          "RMSE_func_active_1e-04": {
+            "mean": 0.07776901940103656,
+            "std": 0.011917543306979528
+          },
+          "RMSE_func_active_1e-03": {
+            "mean": 0.07254920128380155,
+            "std": 0.012165877308753759
+          },
+          "RMSE_func_active_1e-02": {
+            "mean": 0.06919299943841806,
+            "std": 0.012188702756708527
+          },
+          "RMSE_func_S1": {
+            "mean": 0.07693685769884129,
+            "std": 0.009153486344548977
+          },
+          "RMSE_func_ST": {
+            "mean": 0.09543251421099783,
+            "std": 0.014012234978951684
+          },
+          "RMSE_functional_index": {
+            "mean": 0.022823548487079147,
+            "std": 0.007036126910191859
+          },
+          "NRMSE_response_validation_clean": {
+            "mean": 0.3082797839516699,
+            "std": 0.03456802321703994
+          },
+          "NRMSE_reconstruction_train": {
+            "mean": 0.22353382929164856,
+            "std": 0.02335028664831018
+          }
+        }
+      ],
+      "metric_rankings": {
+        "RMSE_func": {
+          "winner": "PIRR-PCA-PCE",
+          "winner_value": 0.06914831554069104,
+          "best_PIRR": "PIRR-PCA-PCE",
+          "best_PIRR_value": 0.06914831554069104,
+          "strongest_conventional": "Direct-Time-PCE",
+          "strongest_conventional_value": 0.1940412916297595,
+          "PIRR_gain_over_conventional": 0.12489297608906846,
+          "PIRR_wins": true
+        },
+        "RMSE_func_variance_weighted": {
+          "winner": "PIRR-PCA-PCE",
+          "winner_value": 0.03310994989063776,
+          "best_PIRR": "PIRR-PCA-PCE",
+          "best_PIRR_value": 0.03310994989063776,
+          "strongest_conventional": "TCN-AE-PCE",
+          "strongest_conventional_value": 0.18727785898175597,
+          "PIRR_gain_over_conventional": 0.15416790909111822,
+          "PIRR_wins": true
+        },
+        "RMSE_func_active_1e-04": {
+          "winner": "PIRR-PCA-PCE",
+          "winner_value": 0.06320872857966789,
+          "best_PIRR": "PIRR-PCA-PCE",
+          "best_PIRR_value": 0.06320872857966789,
+          "strongest_conventional": "Direct-Time-PCE",
+          "strongest_conventional_value": 0.1955739526483033,
+          "PIRR_gain_over_conventional": 0.1323652240686354,
+          "PIRR_wins": true
+        },
+        "RMSE_func_active_1e-03": {
+          "winner": "PIRR-PCA-PCE",
+          "winner_value": 0.060789550557555624,
+          "best_PIRR": "PIRR-PCA-PCE",
+          "best_PIRR_value": 0.060789550557555624,
+          "strongest_conventional": "Direct-Time-PCE",
+          "strongest_conventional_value": 0.19661570963944194,
+          "PIRR_gain_over_conventional": 0.13582615908188633,
+          "PIRR_wins": true
+        },
+        "RMSE_func_active_1e-02": {
+          "winner": "PIRR-PCA-PCE",
+          "winner_value": 0.05942056745892081,
+          "best_PIRR": "PIRR-PCA-PCE",
+          "best_PIRR_value": 0.05942056745892081,
+          "strongest_conventional": "TCN-AE-PCE",
+          "strongest_conventional_value": 0.194190815333119,
+          "PIRR_gain_over_conventional": 0.13477024787419817,
+          "PIRR_wins": true
+        }
+      },
+      "paired_statistics_by_metric": {
+        "RMSE_func": {
+          "PIRR-PCA-PCE": {
+            "metric": "RMSE_func",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-PCA-PCE",
+            "strongest_baseline": "Direct-Time-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.06914831554069104,
+            "baseline_mean": 0.1940412916297595,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.12489297608906844,
+            "paired_difference_95ci": [
+              0.1123051502579635,
+              0.13680367263048496
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          },
+          "PIRR-TCN-AE-PCE": {
+            "metric": "RMSE_func",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-TCN-AE-PCE",
+            "strongest_baseline": "Direct-Time-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.08670868728709961,
+            "baseline_mean": 0.1940412916297595,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.10733260434265987,
+            "paired_difference_95ci": [
+              0.09153026679893533,
+              0.12241545765666219
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          }
+        },
+        "RMSE_func_variance_weighted": {
+          "PIRR-PCA-PCE": {
+            "metric": "RMSE_func_variance_weighted",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-PCA-PCE",
+            "strongest_baseline": "TCN-AE-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.03310994989063776,
+            "baseline_mean": 0.18727785898175597,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.15416790909111822,
+            "paired_difference_95ci": [
+              0.1309165175136211,
+              0.17401303524097544
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          },
+          "PIRR-TCN-AE-PCE": {
+            "metric": "RMSE_func_variance_weighted",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-TCN-AE-PCE",
+            "strongest_baseline": "TCN-AE-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.03928465764087679,
+            "baseline_mean": 0.18727785898175597,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.14799320134087918,
+            "paired_difference_95ci": [
+              0.12560823166008922,
+              0.16732462493782568
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          }
+        },
+        "RMSE_func_active_1e-04": {
+          "PIRR-PCA-PCE": {
+            "metric": "RMSE_func_active_1e-04",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-PCA-PCE",
+            "strongest_baseline": "Direct-Time-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.06320872857966789,
+            "baseline_mean": 0.1955739526483033,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.1323652240686354,
+            "paired_difference_95ci": [
+              0.11943572324908129,
+              0.1444706952301691
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          },
+          "PIRR-TCN-AE-PCE": {
+            "metric": "RMSE_func_active_1e-04",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-TCN-AE-PCE",
+            "strongest_baseline": "Direct-Time-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.07776901940103656,
+            "baseline_mean": 0.1955739526483033,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.11780493324726671,
+            "paired_difference_95ci": [
+              0.10179777809988143,
+              0.1330412269631169
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          }
+        },
+        "RMSE_func_active_1e-03": {
+          "PIRR-PCA-PCE": {
+            "metric": "RMSE_func_active_1e-03",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-PCA-PCE",
+            "strongest_baseline": "Direct-Time-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.060789550557555624,
+            "baseline_mean": 0.19661570963944194,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.1358261590818863,
+            "paired_difference_95ci": [
+              0.1228153485307591,
+              0.14816212987799066
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          },
+          "PIRR-TCN-AE-PCE": {
+            "metric": "RMSE_func_active_1e-03",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-TCN-AE-PCE",
+            "strongest_baseline": "Direct-Time-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.07254920128380155,
+            "baseline_mean": 0.19661570963944194,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.1240665083556404,
+            "paired_difference_95ci": [
+              0.1082757189683725,
+              0.13916220367592783
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          }
+        },
+        "RMSE_func_active_1e-02": {
+          "PIRR-PCA-PCE": {
+            "metric": "RMSE_func_active_1e-02",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-PCA-PCE",
+            "strongest_baseline": "TCN-AE-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.05942056745892081,
+            "baseline_mean": 0.194190815333119,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.13477024787419817,
+            "paired_difference_95ci": [
+              0.11251646554942185,
+              0.15300478339703819
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          },
+          "PIRR-TCN-AE-PCE": {
+            "metric": "RMSE_func_active_1e-02",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-TCN-AE-PCE",
+            "strongest_baseline": "TCN-AE-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.06919299943841806,
+            "baseline_mean": 0.194190815333119,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.12499781589470094,
+            "paired_difference_95ci": [
+              0.1052259668097173,
+              0.14145378865639285
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          }
+        }
+      }
+    },
+    {
+      "N": 200,
+      "summary": [
+        {
+          "Method": "Direct-Time-PCE",
+          "n_seeds": 8,
+          "RMSE_func": {
+            "mean": 0.15153847582224253,
+            "std": 0.010164399426680489
+          },
+          "RMSE_func_variance_weighted": {
+            "mean": 0.1649563708284493,
+            "std": 0.011509300384454055
+          },
+          "RMSE_func_active_1e-04": {
+            "mean": 0.15273479489792374,
+            "std": 0.010244989944038316
+          },
+          "RMSE_func_active_1e-03": {
+            "mean": 0.15354772737524153,
+            "std": 0.010299900183014651
+          },
+          "RMSE_func_active_1e-02": {
+            "mean": 0.15437380568300796,
+            "std": 0.010355764180879407
+          },
+          "RMSE_func_S1": {
+            "mean": 0.13801599892476873,
+            "std": 0.011538033187693362
+          },
+          "RMSE_func_ST": {
+            "mean": 0.16383119243624733,
+            "std": 0.010852758893266399
+          },
+          "RMSE_functional_index": {
+            "mean": 0.10333331618343716,
+            "std": 0.009603167363909223
+          },
+          "NRMSE_response_validation_clean": {
+            "mean": 0.7743845786569288,
+            "std": 0.01909346952371672
+          },
+          "NRMSE_reconstruction_train": null
+        },
+        {
+          "Method": "PCA-PCE",
+          "n_seeds": 8,
+          "RMSE_func": {
+            "mean": 0.20487646450693833,
+            "std": 0.007485877662400776
+          },
+          "RMSE_func_variance_weighted": {
+            "mean": 0.17245411616186396,
+            "std": 0.009416144413595147
+          },
+          "RMSE_func_active_1e-04": {
+            "mean": 0.20227733829537667,
+            "std": 0.007360841709896349
+          },
+          "RMSE_func_active_1e-03": {
+            "mean": 0.19891601794823774,
+            "std": 0.007258285201466171
+          },
+          "RMSE_func_active_1e-02": {
+            "mean": 0.19523147596703438,
+            "std": 0.007208408374572917
+          },
+          "RMSE_func_S1": {
+            "mean": 0.1951805472529668,
+            "std": 0.005472432476972639
+          },
+          "RMSE_func_ST": {
+            "mean": 0.21410377248511997,
+            "std": 0.0098400382980393
+          },
+          "RMSE_functional_index": {
+            "mean": 0.08214520824320865,
+            "std": 0.00893936438356209
+          },
+          "NRMSE_response_validation_clean": {
+            "mean": 0.791627642098303,
+            "std": 0.02135510307112298
+          },
+          "NRMSE_reconstruction_train": {
+            "mean": 0.2830560889231513,
+            "std": 0.008683675734612824
+          }
+        },
+        {
+          "Method": "TCN-AE-PCE",
+          "n_seeds": 8,
+          "RMSE_func": {
+            "mean": 0.179592340101206,
+            "std": 0.015598479479844102
+          },
+          "RMSE_func_variance_weighted": {
+            "mean": 0.15815871772767895,
+            "std": 0.01958944078252331
+          },
+          "RMSE_func_active_1e-04": {
+            "mean": 0.17596237308649107,
+            "std": 0.01609378511900777
+          },
+          "RMSE_func_active_1e-03": {
+            "mean": 0.1724710036749546,
+            "std": 0.01661577474481779
+          },
+          "RMSE_func_active_1e-02": {
+            "mean": 0.16879023576317087,
+            "std": 0.017090683310922655
+          },
+          "RMSE_func_S1": {
+            "mean": 0.17055846641375497,
+            "std": 0.015560418481121616
+          },
+          "RMSE_func_ST": {
+            "mean": 0.18810257136380765,
+            "std": 0.01683484872747822
+          },
+          "RMSE_functional_index": {
+            "mean": 0.09253543294688879,
+            "std": 0.01978928018212699
+          },
+          "NRMSE_response_validation_clean": {
+            "mean": 0.8187610540748288,
+            "std": 0.03724005529447925
+          },
+          "NRMSE_reconstruction_train": {
+            "mean": 0.2492398825278712,
+            "std": 0.026749577364139656
+          }
+        },
+        {
+          "Method": "Lift-Only-PCE (r=0)",
+          "n_seeds": 8,
+          "RMSE_func": {
+            "mean": 0.10290295831135665,
+            "std": 0.007469069986206382
+          },
+          "RMSE_func_variance_weighted": {
+            "mean": 0.06118395149119935,
+            "std": 0.004312926981139906
+          },
+          "RMSE_func_active_1e-04": {
+            "mean": 0.09969968535062126,
+            "std": 0.00794918011001218
+          },
+          "RMSE_func_active_1e-03": {
+            "mean": 0.09860812002430518,
+            "std": 0.008090455609900942
+          },
+          "RMSE_func_active_1e-02": {
+            "mean": 0.09750348167522106,
+            "std": 0.007704328825200278
+          },
+          "RMSE_func_S1": {
+            "mean": 0.09868293116028931,
+            "std": 0.007447790461648686
+          },
+          "RMSE_func_ST": {
+            "mean": 0.10694476283752732,
+            "std": 0.007681207798158472
+          },
+          "RMSE_functional_index": {
+            "mean": 0.038070662282393676,
+            "std": 0.00401587242909198
+          },
+          "NRMSE_response_validation_clean": {
+            "mean": 0.3460319374948197,
+            "std": 0.011600176318713443
+          },
+          "NRMSE_reconstruction_train": {
+            "mean": 0.33751344680980166,
+            "std": 0.011432247864577975
+          }
+        },
+        {
+          "Method": "PIRR-PCA-PCE",
+          "n_seeds": 8,
+          "RMSE_func": {
+            "mean": 0.06686116257692036,
+            "std": 0.006945021061583102
+          },
+          "RMSE_func_variance_weighted": {
+            "mean": 0.033977773540960515,
+            "std": 0.005340157358022768
+          },
+          "RMSE_func_active_1e-04": {
+            "mean": 0.060897126358258405,
+            "std": 0.006811618837229817
+          },
+          "RMSE_func_active_1e-03": {
+            "mean": 0.05913560953586728,
+            "std": 0.006462531067158594
+          },
+          "RMSE_func_active_1e-02": {
+            "mean": 0.05820224944611502,
+            "std": 0.006245409724748429
+          },
+          "RMSE_func_S1": {
+            "mean": 0.0627180803816319,
+            "std": 0.0059399864083019005
+          },
+          "RMSE_func_ST": {
+            "mean": 0.07072119588440604,
+            "std": 0.008233746946951406
+          },
+          "RMSE_functional_index": {
+            "mean": 0.023734972933327995,
+            "std": 0.004326697918964294
+          },
+          "NRMSE_response_validation_clean": {
+            "mean": 0.2599605559912119,
+            "std": 0.016203377589110595
+          },
+          "NRMSE_reconstruction_train": {
+            "mean": 0.17978096543043198,
+            "std": 0.00941053104325839
+          }
+        },
+        {
+          "Method": "PIRR-TCN-AE-PCE",
+          "n_seeds": 8,
+          "RMSE_func": {
+            "mean": 0.07774601187057766,
+            "std": 0.013198158403737626
+          },
+          "RMSE_func_variance_weighted": {
+            "mean": 0.03274586880917695,
+            "std": 0.0060790752048938
+          },
+          "RMSE_func_active_1e-04": {
+            "mean": 0.06546010927678803,
+            "std": 0.013516682767828782
+          },
+          "RMSE_func_active_1e-03": {
+            "mean": 0.05905949314114768,
+            "std": 0.012382018900939725
+          },
+          "RMSE_func_active_1e-02": {
+            "mean": 0.05530006934334196,
+            "std": 0.010953449799660724
+          },
+          "RMSE_func_S1": {
+            "mean": 0.06618486158542697,
+            "std": 0.010299846828273704
+          },
+          "RMSE_func_ST": {
+            "mean": 0.08770221223969697,
+            "std": 0.016169803385274316
+          },
+          "RMSE_functional_index": {
+            "mean": 0.02168142927270291,
+            "std": 0.004433920545892897
+          },
+          "NRMSE_response_validation_clean": {
+            "mean": 0.26830656268446934,
+            "std": 0.027168470895734584
+          },
+          "NRMSE_reconstruction_train": {
+            "mean": 0.18400663091812164,
+            "std": 0.025999073344765786
+          }
+        }
+      ],
+      "metric_rankings": {
+        "RMSE_func": {
+          "winner": "PIRR-PCA-PCE",
+          "winner_value": 0.06686116257692036,
+          "best_PIRR": "PIRR-PCA-PCE",
+          "best_PIRR_value": 0.06686116257692036,
+          "strongest_conventional": "Direct-Time-PCE",
+          "strongest_conventional_value": 0.15153847582224253,
+          "PIRR_gain_over_conventional": 0.08467731324532217,
+          "PIRR_wins": true
+        },
+        "RMSE_func_variance_weighted": {
+          "winner": "PIRR-TCN-AE-PCE",
+          "winner_value": 0.03274586880917695,
+          "best_PIRR": "PIRR-TCN-AE-PCE",
+          "best_PIRR_value": 0.03274586880917695,
+          "strongest_conventional": "TCN-AE-PCE",
+          "strongest_conventional_value": 0.15815871772767895,
+          "PIRR_gain_over_conventional": 0.125412848918502,
+          "PIRR_wins": true
+        },
+        "RMSE_func_active_1e-04": {
+          "winner": "PIRR-PCA-PCE",
+          "winner_value": 0.060897126358258405,
+          "best_PIRR": "PIRR-PCA-PCE",
+          "best_PIRR_value": 0.060897126358258405,
+          "strongest_conventional": "Direct-Time-PCE",
+          "strongest_conventional_value": 0.15273479489792374,
+          "PIRR_gain_over_conventional": 0.09183766853966534,
+          "PIRR_wins": true
+        },
+        "RMSE_func_active_1e-03": {
+          "winner": "PIRR-TCN-AE-PCE",
+          "winner_value": 0.05905949314114768,
+          "best_PIRR": "PIRR-TCN-AE-PCE",
+          "best_PIRR_value": 0.05905949314114768,
+          "strongest_conventional": "Direct-Time-PCE",
+          "strongest_conventional_value": 0.15354772737524153,
+          "PIRR_gain_over_conventional": 0.09448823423409385,
+          "PIRR_wins": true
+        },
+        "RMSE_func_active_1e-02": {
+          "winner": "PIRR-TCN-AE-PCE",
+          "winner_value": 0.05530006934334196,
+          "best_PIRR": "PIRR-TCN-AE-PCE",
+          "best_PIRR_value": 0.05530006934334196,
+          "strongest_conventional": "Direct-Time-PCE",
+          "strongest_conventional_value": 0.15437380568300796,
+          "PIRR_gain_over_conventional": 0.099073736339666,
+          "PIRR_wins": true
+        }
+      },
+      "paired_statistics_by_metric": {
+        "RMSE_func": {
+          "PIRR-PCA-PCE": {
+            "metric": "RMSE_func",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-PCA-PCE",
+            "strongest_baseline": "Direct-Time-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.06686116257692036,
+            "baseline_mean": 0.15153847582224253,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.08467731324532216,
+            "paired_difference_95ci": [
+              0.07792043692582984,
+              0.09095378597927345
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          },
+          "PIRR-TCN-AE-PCE": {
+            "metric": "RMSE_func",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-TCN-AE-PCE",
+            "strongest_baseline": "Direct-Time-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.07774601187057766,
+            "baseline_mean": 0.15153847582224253,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.07379246395166486,
+            "paired_difference_95ci": [
+              0.06517406425865802,
+              0.08230104187325424
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          }
+        },
+        "RMSE_func_variance_weighted": {
+          "PIRR-PCA-PCE": {
+            "metric": "RMSE_func_variance_weighted",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-PCA-PCE",
+            "strongest_baseline": "TCN-AE-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.033977773540960515,
+            "baseline_mean": 0.15815871772767895,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.12418094418671843,
+            "paired_difference_95ci": [
+              0.10737296924676049,
+              0.1385485909724041
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          },
+          "PIRR-TCN-AE-PCE": {
+            "metric": "RMSE_func_variance_weighted",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-TCN-AE-PCE",
+            "strongest_baseline": "TCN-AE-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.03274586880917695,
+            "baseline_mean": 0.15815871772767895,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.125412848918502,
+            "paired_difference_95ci": [
+              0.10831024733340627,
+              0.14008052437874546
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          }
+        },
+        "RMSE_func_active_1e-04": {
+          "PIRR-PCA-PCE": {
+            "metric": "RMSE_func_active_1e-04",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-PCA-PCE",
+            "strongest_baseline": "Direct-Time-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.060897126358258405,
+            "baseline_mean": 0.15273479489792374,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.09183766853966535,
+            "paired_difference_95ci": [
+              0.08466558437485751,
+              0.09849658030490378
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          },
+          "PIRR-TCN-AE-PCE": {
+            "metric": "RMSE_func_active_1e-04",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-TCN-AE-PCE",
+            "strongest_baseline": "Direct-Time-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.06546010927678803,
+            "baseline_mean": 0.15273479489792374,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.08727468562113574,
+            "paired_difference_95ci": [
+              0.07752841806562005,
+              0.0962594928783541
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          }
+        },
+        "RMSE_func_active_1e-03": {
+          "PIRR-PCA-PCE": {
+            "metric": "RMSE_func_active_1e-03",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-PCA-PCE",
+            "strongest_baseline": "Direct-Time-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.05913560953586728,
+            "baseline_mean": 0.15354772737524153,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.09441211783937425,
+            "paired_difference_95ci": [
+              0.08710912614027036,
+              0.10121938853302682
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          },
+          "PIRR-TCN-AE-PCE": {
+            "metric": "RMSE_func_active_1e-03",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-TCN-AE-PCE",
+            "strongest_baseline": "Direct-Time-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.05905949314114768,
+            "baseline_mean": 0.15354772737524153,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.09448823423409386,
+            "paired_difference_95ci": [
+              0.08517662494844262,
+              0.1034726974255652
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          }
+        },
+        "RMSE_func_active_1e-02": {
+          "PIRR-PCA-PCE": {
+            "metric": "RMSE_func_active_1e-02",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-PCA-PCE",
+            "strongest_baseline": "Direct-Time-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.05820224944611502,
+            "baseline_mean": 0.15437380568300796,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.09617155623689293,
+            "paired_difference_95ci": [
+              0.08887015318522136,
+              0.10300251557741617
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          },
+          "PIRR-TCN-AE-PCE": {
+            "metric": "RMSE_func_active_1e-02",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-TCN-AE-PCE",
+            "strongest_baseline": "Direct-Time-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.05530006934334196,
+            "baseline_mean": 0.15437380568300796,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.099073736339666,
+            "paired_difference_95ci": [
+              0.08993731992719617,
+              0.1072236446562098
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          }
+        }
+      }
+    },
+    {
+      "N": 400,
+      "summary": [
+        {
+          "Method": "Direct-Time-PCE",
+          "n_seeds": 8,
+          "RMSE_func": {
+            "mean": 0.12238996320992307,
+            "std": 0.011014139437622864
+          },
+          "RMSE_func_variance_weighted": {
+            "mean": 0.13275534679605627,
+            "std": 0.01237365145141216
+          },
+          "RMSE_func_active_1e-04": {
+            "mean": 0.12335539312705548,
+            "std": 0.011102279567163212
+          },
+          "RMSE_func_active_1e-03": {
+            "mean": 0.12401116101012168,
+            "std": 0.011162660513629501
+          },
+          "RMSE_func_active_1e-02": {
+            "mean": 0.1246775470853305,
+            "std": 0.011224103696437044
+          },
+          "RMSE_func_S1": {
+            "mean": 0.11048855847791715,
+            "std": 0.011762464047979317
+          },
+          "RMSE_func_ST": {
+            "mean": 0.1331593515835849,
+            "std": 0.01124812736966534
+          },
+          "RMSE_functional_index": {
+            "mean": 0.0738630449638108,
+            "std": 0.010255889451141493
+          },
+          "NRMSE_response_validation_clean": {
+            "mean": 0.7479626383448253,
+            "std": 0.017351370762553775
+          },
+          "NRMSE_reconstruction_train": null
+        },
+        {
+          "Method": "PCA-PCE",
+          "n_seeds": 8,
+          "RMSE_func": {
+            "mean": 0.1933172366677261,
+            "std": 0.007077546744599526
+          },
+          "RMSE_func_variance_weighted": {
+            "mean": 0.14898642985660743,
+            "std": 0.008701641147944436
+          },
+          "RMSE_func_active_1e-04": {
+            "mean": 0.19006460937566244,
+            "std": 0.007098306203384401
+          },
+          "RMSE_func_active_1e-03": {
+            "mean": 0.1860151645103879,
+            "std": 0.0071156798661929
+          },
+          "RMSE_func_active_1e-02": {
+            "mean": 0.18154507939569067,
+            "std": 0.0071527373969867535
+          },
+          "RMSE_func_S1": {
+            "mean": 0.1857414805496068,
+            "std": 0.00663368184452946
+          },
+          "RMSE_func_ST": {
+            "mean": 0.20058648614868094,
+            "std": 0.008101313075734886
+          },
+          "RMSE_functional_index": {
+            "mean": 0.05670586024057275,
+            "std": 0.008075983171311562
+          },
+          "NRMSE_response_validation_clean": {
+            "mean": 0.7689195248908718,
+            "std": 0.017673793326454697
+          },
+          "NRMSE_reconstruction_train": {
+            "mean": 0.2869008668023586,
+            "std": 0.00781349631075984
+          }
+        },
+        {
+          "Method": "TCN-AE-PCE",
+          "n_seeds": 8,
+          "RMSE_func": {
+            "mean": 0.1479832765049205,
+            "std": 0.015491673515388753
+          },
+          "RMSE_func_variance_weighted": {
+            "mean": 0.11692655521591128,
+            "std": 0.02269691843145031
+          },
+          "RMSE_func_active_1e-04": {
+            "mean": 0.14265388509933974,
+            "std": 0.01614789062798494
+          },
+          "RMSE_func_active_1e-03": {
+            "mean": 0.13811958259912446,
+            "std": 0.016526350216085527
+          },
+          "RMSE_func_active_1e-02": {
+            "mean": 0.13340573006576434,
+            "std": 0.016818562170220874
+          },
+          "RMSE_func_S1": {
+            "mean": 0.1397091504289218,
+            "std": 0.015178408040755273
+          },
+          "RMSE_func_ST": {
+            "mean": 0.15576817986106245,
+            "std": 0.01635769900625503
+          },
+          "RMSE_functional_index": {
+            "mean": 0.05922921421641765,
+            "std": 0.024242328625891634
+          },
+          "NRMSE_response_validation_clean": {
+            "mean": 0.7905593610959897,
+            "std": 0.03207939992847199
+          },
+          "NRMSE_reconstruction_train": {
+            "mean": 0.19869206492556535,
+            "std": 0.010032146071649315
+          }
+        },
+        {
+          "Method": "Lift-Only-PCE (r=0)",
+          "n_seeds": 8,
+          "RMSE_func": {
+            "mean": 0.10415177408744992,
+            "std": 0.004463268684013305
+          },
+          "RMSE_func_variance_weighted": {
+            "mean": 0.06278052306356069,
+            "std": 0.002875144554786234
+          },
+          "RMSE_func_active_1e-04": {
+            "mean": 0.10122782426299003,
+            "std": 0.004849479108509047
+          },
+          "RMSE_func_active_1e-03": {
+            "mean": 0.1008403215881864,
+            "std": 0.004982356386000851
+          },
+          "RMSE_func_active_1e-02": {
+            "mean": 0.10010826721959526,
+            "std": 0.0047570417783939925
+          },
+          "RMSE_func_S1": {
+            "mean": 0.10080127157541097,
+            "std": 0.004346636986964945
+          },
+          "RMSE_func_ST": {
+            "mean": 0.10739372076092077,
+            "std": 0.004685079956945858
+          },
+          "RMSE_functional_index": {
+            "mean": 0.039567222649867353,
+            "std": 0.00240118986558709
+          },
+          "NRMSE_response_validation_clean": {
+            "mean": 0.3417370979771542,
+            "std": 0.008505348752037607
+          },
+          "NRMSE_reconstruction_train": {
+            "mean": 0.33813878449816587,
+            "std": 0.011590304197127092
+          }
+        },
+        {
+          "Method": "PIRR-PCA-PCE",
+          "n_seeds": 8,
+          "RMSE_func": {
+            "mean": 0.06644156722504754,
+            "std": 0.0059044697639456445
+          },
+          "RMSE_func_variance_weighted": {
+            "mean": 0.035623427228498775,
+            "std": 0.0043936720618269745
+          },
+          "RMSE_func_active_1e-04": {
+            "mean": 0.060370544822070375,
+            "std": 0.00653789006092593
+          },
+          "RMSE_func_active_1e-03": {
+            "mean": 0.05924546694540585,
+            "std": 0.006658713870842066
+          },
+          "RMSE_func_active_1e-02": {
+            "mean": 0.05852311111169088,
+            "std": 0.006668337716885702
+          },
+          "RMSE_func_S1": {
+            "mean": 0.06291335811537167,
+            "std": 0.005373593687074083
+          },
+          "RMSE_func_ST": {
+            "mean": 0.0697871809972603,
+            "std": 0.006446812267201137
+          },
+          "RMSE_functional_index": {
+            "mean": 0.026204682914372744,
+            "std": 0.0038484710103831735
+          },
+          "NRMSE_response_validation_clean": {
+            "mean": 0.24812409927052584,
+            "std": 0.01324360929517802
+          },
+          "NRMSE_reconstruction_train": {
+            "mean": 0.1854559992447346,
+            "std": 0.009166662364396241
+          }
+        },
+        {
+          "Method": "PIRR-TCN-AE-PCE",
+          "n_seeds": 8,
+          "RMSE_func": {
+            "mean": 0.07384184537862079,
+            "std": 0.0028899691164067797
+          },
+          "RMSE_func_variance_weighted": {
+            "mean": 0.030776129918290443,
+            "std": 0.004032974060213013
+          },
+          "RMSE_func_active_1e-04": {
+            "mean": 0.060364476864867164,
+            "std": 0.0037195662157516103
+          },
+          "RMSE_func_active_1e-03": {
+            "mean": 0.053806604687705845,
+            "std": 0.003167510083517196
+          },
+          "RMSE_func_active_1e-02": {
+            "mean": 0.05163887779759775,
+            "std": 0.0026837782933292493
+          },
+          "RMSE_func_S1": {
+            "mean": 0.06328930303708363,
+            "std": 0.002800831421400932
+          },
+          "RMSE_func_ST": {
+            "mean": 0.08303630671975969,
+            "std": 0.0037681269779748982
+          },
+          "RMSE_functional_index": {
+            "mean": 0.021973796524209624,
+            "std": 0.0039336749746485935
+          },
+          "NRMSE_response_validation_clean": {
+            "mean": 0.24630598405852808,
+            "std": 0.014239516186273199
+          },
+          "NRMSE_reconstruction_train": {
+            "mean": 0.1614598650141829,
+            "std": 0.015460370936543387
+          }
+        }
+      ],
+      "metric_rankings": {
+        "RMSE_func": {
+          "winner": "PIRR-PCA-PCE",
+          "winner_value": 0.06644156722504754,
+          "best_PIRR": "PIRR-PCA-PCE",
+          "best_PIRR_value": 0.06644156722504754,
+          "strongest_conventional": "Direct-Time-PCE",
+          "strongest_conventional_value": 0.12238996320992307,
+          "PIRR_gain_over_conventional": 0.055948395984875526,
+          "PIRR_wins": true
+        },
+        "RMSE_func_variance_weighted": {
+          "winner": "PIRR-TCN-AE-PCE",
+          "winner_value": 0.030776129918290443,
+          "best_PIRR": "PIRR-TCN-AE-PCE",
+          "best_PIRR_value": 0.030776129918290443,
+          "strongest_conventional": "TCN-AE-PCE",
+          "strongest_conventional_value": 0.11692655521591128,
+          "PIRR_gain_over_conventional": 0.08615042529762083,
+          "PIRR_wins": true
+        },
+        "RMSE_func_active_1e-04": {
+          "winner": "PIRR-TCN-AE-PCE",
+          "winner_value": 0.060364476864867164,
+          "best_PIRR": "PIRR-TCN-AE-PCE",
+          "best_PIRR_value": 0.060364476864867164,
+          "strongest_conventional": "Direct-Time-PCE",
+          "strongest_conventional_value": 0.12335539312705548,
+          "PIRR_gain_over_conventional": 0.06299091626218832,
+          "PIRR_wins": true
+        },
+        "RMSE_func_active_1e-03": {
+          "winner": "PIRR-TCN-AE-PCE",
+          "winner_value": 0.053806604687705845,
+          "best_PIRR": "PIRR-TCN-AE-PCE",
+          "best_PIRR_value": 0.053806604687705845,
+          "strongest_conventional": "Direct-Time-PCE",
+          "strongest_conventional_value": 0.12401116101012168,
+          "PIRR_gain_over_conventional": 0.07020455632241583,
+          "PIRR_wins": true
+        },
+        "RMSE_func_active_1e-02": {
+          "winner": "PIRR-TCN-AE-PCE",
+          "winner_value": 0.05163887779759775,
+          "best_PIRR": "PIRR-TCN-AE-PCE",
+          "best_PIRR_value": 0.05163887779759775,
+          "strongest_conventional": "Direct-Time-PCE",
+          "strongest_conventional_value": 0.1246775470853305,
+          "PIRR_gain_over_conventional": 0.07303866928773275,
+          "PIRR_wins": true
+        }
+      },
+      "paired_statistics_by_metric": {
+        "RMSE_func": {
+          "PIRR-PCA-PCE": {
+            "metric": "RMSE_func",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-PCA-PCE",
+            "strongest_baseline": "Direct-Time-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.06644156722504754,
+            "baseline_mean": 0.12238996320992307,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.05594839598487554,
+            "paired_difference_95ci": [
+              0.04755087519742527,
+              0.0630892052606163
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          },
+          "PIRR-TCN-AE-PCE": {
+            "metric": "RMSE_func",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-TCN-AE-PCE",
+            "strongest_baseline": "Direct-Time-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.07384184537862079,
+            "baseline_mean": 0.12238996320992307,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.04854811783130228,
+            "paired_difference_95ci": [
+              0.04164343815572037,
+              0.05434819280244418
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          }
+        },
+        "RMSE_func_variance_weighted": {
+          "PIRR-PCA-PCE": {
+            "metric": "RMSE_func_variance_weighted",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-PCA-PCE",
+            "strongest_baseline": "TCN-AE-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.035623427228498775,
+            "baseline_mean": 0.11692655521591128,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.08130312798741252,
+            "paired_difference_95ci": [
+              0.0637330166558425,
+              0.09810432818923849
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          },
+          "PIRR-TCN-AE-PCE": {
+            "metric": "RMSE_func_variance_weighted",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-TCN-AE-PCE",
+            "strongest_baseline": "TCN-AE-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.030776129918290443,
+            "baseline_mean": 0.11692655521591128,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.08615042529762083,
+            "paired_difference_95ci": [
+              0.06952200451205945,
+              0.10159625148632054
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          }
+        },
+        "RMSE_func_active_1e-04": {
+          "PIRR-PCA-PCE": {
+            "metric": "RMSE_func_active_1e-04",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-PCA-PCE",
+            "strongest_baseline": "Direct-Time-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.060370544822070375,
+            "baseline_mean": 0.12335539312705548,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.0629848483049851,
+            "paired_difference_95ci": [
+              0.054598136637714234,
+              0.07004276119066632
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          },
+          "PIRR-TCN-AE-PCE": {
+            "metric": "RMSE_func_active_1e-04",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-TCN-AE-PCE",
+            "strongest_baseline": "Direct-Time-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.060364476864867164,
+            "baseline_mean": 0.12335539312705548,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.06299091626218832,
+            "paired_difference_95ci": [
+              0.05684769329506359,
+              0.06856936930616442
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          }
+        },
+        "RMSE_func_active_1e-03": {
+          "PIRR-PCA-PCE": {
+            "metric": "RMSE_func_active_1e-03",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-PCA-PCE",
+            "strongest_baseline": "Direct-Time-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.05924546694540585,
+            "baseline_mean": 0.12401116101012168,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.06476569406471583,
+            "paired_difference_95ci": [
+              0.05625473668711858,
+              0.07181649664981718
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          },
+          "PIRR-TCN-AE-PCE": {
+            "metric": "RMSE_func_active_1e-03",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-TCN-AE-PCE",
+            "strongest_baseline": "Direct-Time-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.053806604687705845,
+            "baseline_mean": 0.12401116101012168,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.07020455632241583,
+            "paired_difference_95ci": [
+              0.0637148159428966,
+              0.07624013302780805
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          }
+        },
+        "RMSE_func_active_1e-02": {
+          "PIRR-PCA-PCE": {
+            "metric": "RMSE_func_active_1e-02",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-PCA-PCE",
+            "strongest_baseline": "Direct-Time-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.05852311111169088,
+            "baseline_mean": 0.1246775470853305,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.06615443597363964,
+            "paired_difference_95ci": [
+              0.05764241668563568,
+              0.07322587319487145
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          },
+          "PIRR-TCN-AE-PCE": {
+            "metric": "RMSE_func_active_1e-02",
+            "lower_is_better": true,
+            "proposed_method": "PIRR-TCN-AE-PCE",
+            "strongest_baseline": "Direct-Time-PCE",
+            "paired_seeds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "n_pairs": 8,
+            "proposed_mean": 0.05163887779759775,
+            "baseline_mean": 0.1246775470853305,
+            "paired_difference_definition": "baseline - proposed",
+            "paired_difference_mean": 0.07303866928773277,
+            "paired_difference_95ci": [
+              0.06612646662540875,
+              0.07906717343744137
+            ],
+            "paired_win_rate": 1.0,
+            "wilcoxon_statistic": 36.0,
+            "wilcoxon_one_sided_p": 0.00390625
+          }
+        }
+      }
+    }
+  ],
+  "matrix_summary": {
+    "n_conditions": 4,
+    "PIRR_wins_by_metric": {
+      "RMSE_func": 4,
+      "RMSE_func_variance_weighted": 4,
+      "RMSE_func_active_1e-04": 4,
+      "RMSE_func_active_1e-03": 4,
+      "RMSE_func_active_1e-02": 4
+    }
+  }
+}
