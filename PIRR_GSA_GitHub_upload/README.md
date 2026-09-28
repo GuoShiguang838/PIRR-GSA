@@ -12,7 +12,7 @@ This package accompanies **Physics-Interface Residual Reduction for Time-Resolve
 
 The `case2_battery` and `case3_transport` directory and command names are stable internal identifiers from the experiment code. The manuscript case numbers follow the evidence order above.
 
-`Direct-Time-PCE` is a non-reduced pointwise check. In Case 3 the formal ranking is restricted to methods fitting at most five reduced coordinates; the 192-output Direct-Time route is reported but not ranked with reduced-space methods.
+`Direct-Time-PCE` is a non-reduced pointwise check. In Case 2 the formal ranking is restricted to methods fitting at most five reduced coordinates; the 192-output Direct-Time route is reported but not ranked with reduced-space methods.
 
 ## Environment
 
@@ -74,7 +74,7 @@ Add `--rebuild-reference` to reconstruct the high-cost reference before fitting 
 python run.py full --case case3_transport --rebuild-reference
 ```
 
-The Case 3 reference uses a base sample of 65,536 and is intentionally much more expensive than `verify` or `plot`. The reference evaluations are not part of the method training budgets.
+The Case 2 reference uses a base sample of 65,536 and is intentionally much more expensive than `verify` or `plot`. The reference evaluations are not part of the method training budgets.
 
 ## Fixed estimands and comparison rules
 
